@@ -11,6 +11,7 @@
 #import "AccessExternalAPIiOSViewController.h"
 #import "ASIHTTPRequest.h"
 #import "JSONKit.h"
+#import "UITableViewTweetCell.h"
 
 @implementation AccessExternalAPIiOSViewController
 
@@ -26,10 +27,31 @@
  	return [tweets count];
  }
 
- -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+ -(UITableViewTweetCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"cellForRowAtIndexPath");
- 	UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    cell.textLabel.text = [[tweets objectAtIndex:indexPath.row] objectForKey:@"text"];
+     NSString *uniqueIdentifier = @"customCell";
+     UITableViewTweetCell  *cell = nil;
+     cell = (UITableViewTweetCell *) [_tweetList dequeueReusableCellWithIdentifier:uniqueIdentifier];
+
+     if(!cell)
+      {
+
+          NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"UITableViewTweetCell" owner:nil options:nil];
+
+          for(id currentObject in topLevelObjects)
+          {
+              if([currentObject isKindOfClass:[UITableViewTweetCell class]])
+              {
+                  cell = (UITableViewTweetCell *)currentObject;
+                  break;
+              }
+          }
+      }
+
+    NSString *text = [[tweets objectAtIndex:indexPath.row] objectForKey:@"text"];
+    cell.msg.text = text;
+
+
  	return cell;
  }
 

@@ -30,6 +30,8 @@
 		C01FCF5008A95454005424A1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01FCF5008A95454005424A0 /* SystemConfiguration.framework */; };
 		C01FCF5008A95454005424A3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01FCF5008A95454005424A2 /* MobileCoreServices.framework */; };
 		C01FCF5008A95454005424A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		C01FCF5008A95454005424A8 /* UITableViewTweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C01FCF5008A95454005424A7 /* UITableViewTweetCell.m */; };
+		C01FCF5008A95454005424AB /* UITableViewTweetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C01FCF5008A95454005424AA /* UITableViewTweetCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,9 @@
 		C01FCF5008A954540054249E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		C01FCF5008A95454005424A0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C01FCF5008A95454005424A2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C01FCF5008A95454005424A7 /* UITableViewTweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewTweetCell.m; sourceTree = "<group>"; };
+		C01FCF5008A95454005424A9 /* UITableViewTweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewTweetCell.h; sourceTree = "<group>"; };
+		C01FCF5008A95454005424AA /* UITableViewTweetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UITableViewTweetCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +103,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C01FCF5008A95454005424A9 /* UITableViewTweetCell.h */,
+				C01FCF5008A95454005424A7 /* UITableViewTweetCell.m */,
 				1D3623240D0F684500981E51 /* AccessExternalAPIiOSAppDelegate.h */,
 				1D3623250D0F684500981E51 /* AccessExternalAPIiOSAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* AccessExternalAPIiOSViewController.h */,
@@ -140,6 +147,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C01FCF5008A95454005424AA /* UITableViewTweetCell.xib */,
 				2899E5210DE3E06400AC0155 /* AccessExternalAPIiOSViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* AccessExternalAPIiOS-Info.plist */,
@@ -250,6 +258,7 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* AccessExternalAPIiOSViewController.xib in Resources */,
+				C01FCF5008A95454005424AB /* UITableViewTweetCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +282,7 @@
 				C01FCF5008A9545400542496 /* ASIInputStream.m in Sources */,
 				C01FCF5008A9545400542499 /* ASINetworkQueue.m in Sources */,
 				C01FCF5008A954540054249D /* Reachability.m in Sources */,
+				C01FCF5008A95454005424A8 /* UITableViewTweetCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
